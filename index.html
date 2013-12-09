@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> :: CSS3 :: </title>
+        <meta charset="UTF-8">
+        
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+        
+        <link href="css/basics.css" rel="stylesheet" />
+        
+        <script src="js/jquery-2.0.3.min.js"></script>
+        <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+        
+        <link href="css/presentation.css" rel="stylesheet" >
+        <script src="js/presentation.js"></script>
+        <script src="js/editors.js"></script>
+       
+    </head>
+    <body class="impress-not-supported">
+        <div class="fallback-message">
+            <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+            <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+        </div>
+        
+        <div id="impress">            
+            
+            <div id="overview" class="step" data-x="100" data-y="1500" data-scale="10" ></div>
+
+            <div id="css_anatomy" class="step" data-x="-6000" data-y="1500" data-scale="5" >
+                <section>
+                    <header>Anatomy of a CSS rule</header>
+                    <article >                        
+                        <br />                        
+                        <br />
+                        <br />
+                        <img src="images/anatomy-of-a-css-rule.png" />
+                    </article>                    
+                </section>
+            </div>
+            
+            <div id="selectors" class="step" data-x="-3000" data-y="4000" data-scale="3" data-rotate="-45" >
+                <section>
+                    <header>Selectors</header>
+                    
+                    They are patterns used to select the element(s) you want to style.
+                    
+                    <br />
+                    <br />
+                    
+                    <div class="left">
+                        <ul>
+                            <li>
+                                &bull; By tag name:
+                                <div class="rule">
+                                    <span class="keyword">button</span>{color: #d40000;}
+                                </div>                                
+                            </li>
+                            <li>
+                                &bull; By Id (<span class="keyword">#</span>):
+                                <div class="rule">
+                                    <span class="keyword">#main</span>{background-color: blue;}
+                                </div>
+                            </li>
+                            <li>
+                                &bull; By class attribute (<span class="keyword">.</span>):
+                                <div class="rule">
+                                    <span class="keyword">.toolbarButton</span>{font-weight:bold;}
+                                </div>
+                            </li>
+                            <li>
+                                &bull; By elements grouping(<span class="keyword">,</span>):
+                                <div class="rule">
+                                    <span class="keyword">#toolbar,span</span>{color: white;}
+                                </div>
+                            </li>
+                            <li>
+                                &bull; By elements path using nesting(<span class="keyword">space</span>, <span class="keyword">></span> and <span class="keyword">combinations</span>):
+                                <div class="rule">
+                                    <span class="keyword">#main span</span>{color: white;}
+                                </div>
+                            </li>
+                            <li>
+                                &bull; By pseudo-clases and pseudo-elements (<span class="keyword">:</span>):
+                                <div class="rule">
+                                    <span class="keyword">#main span:nth-of-type(2)</span>{color: red;}
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <div id="selectors_example"><div id="main">
+    <div id="toolbar">
+        <button class="toolbarButton">
+            <img src="images/accenture_small.png" />
+            <br />
+            CSS3
+        </button>
+    </div>
+    <span>First child</span>
+    <span>Second child</span>
+</div>
+                        </div>
+                    </div>
+                    
+                    <br />
+                    <div class="clear"></div>
+                    <div class="image">
+                        <a href="http://jsfiddle.net/etlapa/HrYH8/3/" target="_blank">Try me</a>
+                    </div>                    
+                </section>                
+            </div>
+                                    
+            <div id="more_selectors" class="step" data-x="-1500" data-y="2200" >                
+                <section>
+                    <header>More about selectors...</header>
+                    <!-- Definicion de Mozilla Foundation
+                    https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+                    -->
+                    <p>
+                        A <span class="keyword">pseudo-class</span> is a keyword added to selectors that specifies a special state of the element to be selected.
+                    They are not based on the content of the document tree. eg: history of the navigator, status of content, position of the mouse, etc.
+                    </p>
+                    <p>
+                        <span class="keyword">Pseudo-elements</span> match virtual elements that don’t exist explicitly in the document tree. Pseudo-elements can be dynamic.
+                    </p>
+                    <br />
+                    <p>
+                        Below are shown the selectors and all of them can be combined:
+                    </p>
+                    <br />
+                    
+                <table >
+                        <colgroup>
+                                <col WIDTH="86"><col WIDTH="86"><col WIDTH="86"><col WIDTH="86"><col WIDTH="86">
+                        </colgroup>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17" WIDTH="86"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_class.asp">.class</a></font></td>
+                                <td ALIGN="LEFT" WIDTH="86"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attribute_value.asp">
+                                [attribute=value]</a></font></td>
+                                <td ALIGN="LEFT" WIDTH="86"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_firstline.asp">:first-line</a></font></td>
+                                <td ALIGN="LEFT" WIDTH="86"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_first-of-type.asp">
+                                :first-of-type</a></font></td>
+                                <td ALIGN="LEFT" WIDTH="86"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_root.asp">:root</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_id.asp">#id</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attribute_value_contains.asp">
+                                [attribute~=value]</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_firstchild.asp">
+                                :first-child</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_last-of-type.asp">
+                                :last-of-type</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_empty.asp">:empty</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_all.asp">*</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attribute_value_lang.asp">
+                                [attribute|=value]</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_before.asp">:before</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_only-of-type.asp">
+                                :only-of-type</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_target.asp">:target</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_element.asp">element</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_link.asp">:link</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_after.asp">:after</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_only-child.asp">:only-child</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_enabled.asp">:enabled</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_element_comma.asp">
+                                element,element</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_visited.asp">:visited</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_lang.asp">:lang(language)</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_nth-child.asp">
+                                :nth-child(n)</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_disabled.asp">:disabled</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_element_element.asp">
+                                element&nbsp;element</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_active.asp">:active</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_gen_sibling.asp">
+                                element1~element2</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_nth-last-child.asp">
+                                :nth-last-child(n)</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_checked.asp">:checked</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_element_gt.asp">
+                                element&gt;element</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_hover.asp">:hover</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attr_begin.asp">
+                                [attribute^=value]</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_nth-of-type.asp">
+                                :nth-of-type(n)</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_not.asp">:not(selector)</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_element_pluss.asp">
+                                element+element</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_focus.asp">:focus</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attr_end.asp">
+                                [attribute$=value]</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_nth-last-of-type.asp">
+                                :nth-last-of-type(n)</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_selection.asp">::selection</a></font></td>
+                        </tr>
+                        <tr>
+                                <td ALIGN="LEFT" HEIGHT="17"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attribute.asp">[attribute]</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_firstletter.asp">
+                                :first-letter</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_attr_contain.asp">
+                                [attribute*=value]</a></font></td>
+                                <td ALIGN="LEFT"><font FACE="Times New Roman">
+                                <a HREF="http://www.w3schools.com/cssref/sel_last-child.asp">:last-child</a></font></td>
+                                <td ALIGN="LEFT"><br></td>
+                        </tr>
+                </table>
+                
+                </section>
+            </div>
+
+            <div id="css_property" class="step" data-x="-2500" data-y="1800" >
+                <section>
+                    <header>
+                        Property                        
+                    </header>
+                    <p>
+                        The property is the style attribute you want to change.
+                    </p>
+                    <p>
+                        Each property has a value.
+                    </p>                    
+                    <img src="images/css-rule.png" />
+                </section>                                
+            </div>
+            
+            <div id="ways_to_use" class="step" data-x="-2500" data-y="1000" >
+                <section>
+                    <header>
+                        Ways to Insert CSS
+                    </header>
+                    <p>
+                        There are three ways of inserting a style sheet:
+                    </p>
+                    <ul>
+                        <li>
+                            External style sheet
+                            <div id="ways_external" class="code_box"><link href="css/presentation.css" rel="stylesheet" ></div>
+                        </li>
+                        <li>
+                            Internal style sheet
+                            <div id="ways_internal" class="code_box"><style>
+    hr {color:sienna;}
+    p {margin-left:20px;}
+</style></div>
+                        </li>
+                        <li>
+                            Inline style
+                            <div id="ways_inline" class="code_box"><p style="color:sienna;margin-left:20px;">
+    This is a paragraph.
+</p></div>
+                        </li>
+                    </ul>
+                </section>               
+            </div>
+            
+            <div id="cascading_order" class="step" data-x="-3000" >
+                <section>
+                    <header>
+                        Cascading order
+                    </header>
+                    <p>
+                        What style will be used when there is more than one style specified for an HTML element?
+                    </p>
+                    <p>
+                        The priorities are shown below:
+                    </p>
+                    <ul>
+                        <li>
+                            Browser default (default style by browser)
+                        </li>
+                        <li>
+                            External style sheet (external .css file)
+                        </li>
+                        <li>
+                            Internal style sheet (declarated on head)
+                        </li>
+                        <li>
+                            Inline style (declarated on style attribute from an element)
+                        </li>
+                        <li>
+                            <span class="keyword">!important</span> rule (I don't care about anything)
+                            <div id="cascading_order_important">hr {
+    color: black !important;
+}</div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            
+            <div id="non_conflicted" class="step" data-x="-2500" data-y="-500" >
+                <section>
+                    <header>
+                        I almost forgot it...
+                    </header>                    
+                </section>
+                <p>
+                    Non-conflicted properties will be combined:
+                </p>                
+                <div id="seventh_css" class="code_box">.intro{
+    color: #ddddadd;
+}
+.intro{
+    margin-bottom: 5px;
+    width: 900px;
+}</div>
+                <div id="seventh_combined" class="code_box">.intro{
+    color: #ddddadd;
+    margin-bottom: 5px;
+    width: 900px;
+}</div>
+                <p><img src="images/arrow_right.png" /></p>
+            </div>
+            
+            <div id="box_model" class="step" data-x="-3000" data-y="-1200" >
+                <section>
+                    <header>
+                        The box-model property
+                    </header>
+                    <article>                        
+                        <p class="main">
+                            Each HTML element is a "box"
+                        </p>                        
+                        <div class="left">
+                            <img src="images/arrow_right_up.png" />
+                            <div class="clear"></div>
+                            <div class="msg">
+                                The <span class="keyword">margin</span> isn't part of the <span class="keyword">width</span>
+                            </div>                                
+                        </div>
+                        <div class="right">
+                            <img src="images/box_model.png" />
+                        </div>                        
+                        <div class="clear"></div>                        
+                        <p>
+                            which consists of <span class="keyword">margins</span>, <span class="keyword">borders</span>, <span class="keyword">padding</span> and the content of the element itself.
+                        </p>                        
+                    </article>
+                </section>               
+            </div>
+
+            <div id="calculating_box" class="step" data-x="-2000" data-y="-1500" >
+                <section>
+                    <header>
+                        Calculating  the width of the .box:
+                    </header>
+                    <article>
+                        <div id="calculating_box_style" class="code_box">.box{
+    width: 300px;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px;    
+}</div>
+                        
+                        <div class="left">
+                            <img src="images/arrow_right_up.png" />
+                            <div class="clear"></div>
+                            <div class="msg">
+                                Remember... the <span class="keyword">margin</span> isn't part of the <span class="keyword">width</span>
+                            </div>                                
+                        </div>
+                        <div class="right">
+                            <img src="images/box_model2.png" />
+                        </div>
+                        
+                        <div class="clear"></div>
+                
+                        <div id="box_calculated" class="code_box">width: 
+        300 + (10*2) + (2*2) = 324px</div>
+                        
+                    </article>
+                </section>
+            </div>
+            
+            <div id="border_radius" class="step" data-x="-1500" data-y="-3500" data-scale="3" >
+                <section>
+                    <header>
+                        The border-radius property
+                    </header>
+                    <article>
+                        <p>
+                            Applies rounded corners to borders. The values can be pixels or percentages.
+                        </p>
+                        <a href="http://jsfiddle.net/etlapa/NHse9/" target="_blank">Try me</a>
+                        <ul>
+                            <li>
+                                Applying to all corners:
+                                <div id="border_radius_simple" class="code_box">.box{
+    border-radius: 15px;
+}</div>                                
+                            </li>
+                            <li>
+                                Applying by indivial corner
+                                <div id="border_radius_individual" class="code_box">.box{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 15px;
+}</div>                                                        
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="short_hands" class="step" data-x="-7500" data-y="-4000" data-z="-5000" data-scale="4" >
+                <section>
+                    <header>
+                        The use of shorthands
+                    </header>
+                    <article>
+                        <p>
+                            They allow to specify <span class="keyword">values</span> of several <span class="keyword">properties</span> with a single <span class="keyword">property</span>.
+                        </p>
+                        <p>
+                            In other words, shorthands are definitions of common properties acting on the same theme.
+                        </p>
+                        <p>For instance:</p>
+                        <ul>
+                            <li>
+                                <div id="short_hands_1" class="code_box">.box{ border-width: 1em 2em 3em 4em; }</div>
+                            </li>
+                            <li>
+                                <div id="short_hands_2" class="code_box">.box{ border-width: 1em; }</div>
+                            </li>
+                            <li>
+                                <div id="short_hands_3" class="code_box">.box{
+    background-color: #000;
+    background-image: url(images/bg.gif);
+    background-repeat: no-repeat;
+    background-position: top right;
+}</div>
+                            </li>
+                            <li>
+                                <div id="short_hands_4" class="code_box">.box{
+    background: #000 url(images/bg.gif) no-repeat top right;
+}</div>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+                
+                <!--<img src="images/css-shorthand-box-clockwise.png" />-->
+            </div>
+            
+            <div id="border_example" class="step" data-x="1500" data-y="-3000" data-scale="2" data-rotate="50" >
+                <section>
+                    <article>
+                        <header>
+                            For example:
+                        </header>
+                        <p>
+                            border-width syntax:
+                        </p>
+                        <div class="code_box" id="border_example_syntax">
+    border-width: [top] [right] [bottom] [left];</div>
+                        
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    The four values represent the top, right, bottom and left edges respectively
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="image">
+                                    <img src="images/border4.png" />
+                                </td>
+                                <td class="code">
+                                    <div id="border_example_4" class="code_box">.box{
+    border-width: 1em 2em 3em 4em;
+}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    The first value represents the top edge, the second, the horizontal
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/border3.png" />
+                                </td>
+                                <td>
+                                    <div id="border_example_3" class="code_box">.box{
+    border-width: 1em 2em 3em;
+}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    The first value represents the vertical edges, the second the horizontal ones.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/border2.png" />
+                                </td>
+                                <td>
+                                    <div id="border_example_2" class="code_box">.box{
+    border-width: 1em 2em;
+}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    The unique value represents all edges.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/border1.png" />
+                                </td>
+                                <td>
+                                    <div id="border_example_1" class="code_box">.box{
+    border-width: 1em;
+}</div>
+                                </td>
+                            </tr>
+                        </table>                        
+                    </article>
+                </section>
+            </div>
+            
+            <div id="border-radius_example" class="step" data-x="-1000" data-y="-1800" >
+                <section>
+                    <article>
+                        <header>
+                            Another example:
+                        </header>
+                        <p>
+                            border-radius syntax:
+                        </p>
+                        <div class="code_box" id="bre_syntax">
+    border-radius: [top left] [top right] [bottom right] [bottom left];</div>
+                        
+                        <table>
+                            <tr>
+                                <td colspan="2">
+                                    The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="image">
+                                    <img src="images/corner4.png" />
+                                </td>
+                                <td class="code">
+                                    <div id="bre_4" class="code_box">.box{
+    border-radius: 1em 2em 3em 4em;
+}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/corner3.png" />
+                                </td>
+                                <td>
+                                    <div id="bre_3" class="code_box">.box{
+    border-radius: 1em 2em 3em;
+}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    The first value represents the top left and bottom right corner, the second the top right and bottom left ones.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/corner2.png" />
+                                </td>
+                                <td>
+                                    <div id="bre_2" class="code_box">.box{
+    border-radius: 1em 2em;
+}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    The unique value represents all corners.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="images/corner1.png" />
+                                </td>
+                                <td>
+                                    <div id="bre_1" class="code_box">.box{
+    border-radius: 1em;
+}</div>
+                                </td>
+                            </tr>
+                        </table>                        
+                    </article>
+                </section>
+            </div>
+            
+            <div id="last_example" class="step" data-x="400" data-y="-2500" data-rotate="-50" >
+                <section>
+                    <header>
+                        Last example... about shorthands
+                    </header>
+                    <article>
+                        <ul>
+                            <li>
+                                The following declarations:
+                                <div id="last_example_1" class="code_box">.box{
+    font-style: italic;
+    font-weight: bold;
+    font-size: .8em;
+    line-height: 1.2;
+    font-family: Arial, sans-serif;
+}</div>
+                            </li>
+                            <li>
+                                can be shortened to the following:
+                                <div id="last_example_2" class="code_box">.box{
+    font: italic bold .8em/1.2 Arial, sans-serif;
+}</div>
+                            </li>
+                        </ul>
+
+                        <p>
+                            When values are omitted from a shorthand form, each "missing" property is assigned to its initial value (Do you remember cascade?)
+                        </p>                        
+                        <br />
+                        <p>
+                            More about shorthands:
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/background" title=""><code>background</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/font" title=""><code>font</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin" title=""><code>margin</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border" title=""><code>border</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-top" title=""><code>border-top</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-right" title=""><code>border-right</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-bottom" title=""><code>border-bottom</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-left" title=""><code>border-left</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-width" title=""><code>border-width</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-color" title=""><code>border-color</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-style" title=""><code>border-style</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" title=""><code>transition</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform" title=""><code>transform</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding" title=""><code>padding</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style" title=""><code>list-style</code></a>,  
+                            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius" title=""><code>border-radius</code></a>.
+                            <!--
+                            Information taken from:
+                            https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties   -->
+                        </p>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="box_shadow" class="step" data-x="1000" data-y="-1800" >
+                <section>
+                    <header>
+                        The box-shadow property
+                    </header>
+                    <article>                        
+                        <p>
+                            Specifies a shadow on an element.
+                        </p>
+                        <p>
+                            Syntax:
+                        </p>
+                        <div id="box_shadow_syntax" class="code_box">    box-shadow: [h-shadow] [v-shadow] [blur] [spread] [color] [inset]</div>
+                        <br />
+                        <p>
+                            Example:
+                        </p>
+                        <div id="box_shadow_sample" class="code_box">.box{
+    box-shadow: 1px 2px 2px #000;
+}</div>
+                        <p>Output:</p>
+                        <div class="container_box"><div class="box"><span>I am inside a box with shadow...</span></div></div>
+                        <a href="http://jsfiddle.net/etlapa/yenT7/" target="_blank">Try me</a>
+                    </article>
+                </section>
+            </div>
+
+            <div id="text_shadow" class="step" data-y="-4500" data-x="4200" >
+                <section>
+                    <header>
+                        The text-shadow property
+                    </header>
+                    <article>
+                        <p>
+                            It's like a box-shadow but it applies to text.
+                        </p>
+                        <p>
+                            Syntax:
+                        </p>
+                        <div id="text_shadow_syntax">    text-shadow: [h-shadow] [v-shadow] [blur] [color]</div>
+                        <br />
+                        <p>
+                            Example:
+                        </p>
+                        <div id="text_shadow_sample" class="code_box">.box{
+    text-shadow: 1px 2px 2px #000;
+}</div>
+                        <p>Output:</p>
+                        <div class="container_box">
+                            <span>I have a shadow!</span>
+                            <div>and I don't</div>
+                        </div>
+                        <a href="http://jsfiddle.net/etlapa/W6Ubg/" target="_blank">Try me</a>
+                    </article>
+                </section>                
+            </div>
+
+            <div id="background_property" class="step" data-x="0" data-y="0" data-scale="3" >
+                <section>
+                    <header>
+                        The background property
+                    </header>
+                    <article>
+                        <p>
+                            Now we can apply multiple backgrounds to an element.
+                        </p>
+                        <p>
+                            They are stacked in the order in which you specify them.
+                        </p>
+                        <p>
+                            Example:
+                        </p>
+                        <div id="background_property_sample" class="code_box">body{
+    background-image:   url(../images/html5.png),
+                        url(../images/css3.png),
+                        url(../images/backgrounds/azul.jpg);
+    background-position: center left, center right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100px, 100px, 100%;
+}</div>                        
+                        <p>Output:</p>
+                        <p class="pst_pst">(pst, pst)</p>
+                        <p>(Have you noticed the HTML5, CSS3 logos and the blue background in this presentation?)</p>
+                        <div class="left">
+                            <img src="images/arrow_left.png" />
+                        </div>
+                        <div class="right">
+                            <img src="images/arrow_right.png" />
+                        </div>
+                    </article>
+                </section>
+                
+            </div>
+            
+            <div id="font_face" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+                <section>
+                    <header>
+                        The @font-face rule
+                    </header>
+                    <article>
+                        
+                        <p>
+                            Goodbye boring fonts... now we have the ability to provide custom fonts on our websites
+                        </p>
+                        
+                        <div class="normal">
+                            We were in wish list of 
+                        </div>
+                        <div class="bold">
+                            Web Designers in HTML 4
+                        </div>
+                        <div class="below">(and below)</div>
+                        <div id="font_face_code" class="code_box">@font-face{
+    font-family: vladimir;
+    src: url("../fonts/vladimir.eot"),
+         url("../fonts/vladimir.ttf"),
+         url("../fonts/vladimir.woff");
+}
+body{
+    font-family: vladimir, cursive;
+}</div>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="transforms" class="step" data-x="4500" data-y="3500" data-rotate="180" data-scale="4" >
+                <section>
+                    <header>
+                        Transforms
+                    </header>
+                    <article>
+                        <p>
+                            Using the transform property, we can 
+                            <span class="positioning">translate</span>,
+                            <span class="rotating">rotate</span>, 
+                            <span class="scaling">scale</span> and 
+                            <span class="skewing">skew</span>
+                        </p>
+                        <div class="left">
+                            Examples:
+                        </div>
+                        <div class="right">
+                            <a href="http://jsfiddle.net/etlapa/8hV68/" target="_blank">Try me</a>
+                        </div>
+                        <div class="clear"></div>
+                        <ul>
+                            <li>
+                                Translate:
+                                <div id="transforms_positioning" class="code_box">.positioning {
+    -webkit-transform: translate(0px,-10px);
+    -moz-transform:    translate(0px,-10px);
+    -ms-transform:     translate(0px,-10px);
+    -o-transform:      translate(0px,-10px);
+    transform:         translate(0px,-10px);
+}</div>                                
+                            </li>
+                            <li>
+                                Rotate:
+                                <div id="transforms_rotating" class="code_box">.rotating {
+    -webkit-transform: rotate(-10deg);
+    -moz-transform:    rotate(-10deg);
+    -ms-transform:     rotate(-10deg);
+    -o-transform:      rotate(-10deg);
+    transform:         rotate(-10deg);
+}</div>                                
+                            </li>
+                            <li>
+                                Scale:
+                                <div id="transforms_scaling" class="code_box">.scaling {
+    -webkit-transform: scale(0.7);
+    -moz-transform:    scale(0.7);
+    -ms-transform:     scale(0.7);
+    -o-transform:      scale(0.7);
+    transform:         scale(0.7);
+}</div>                                
+                            </li>
+                            <li>
+                                Skew:
+                                <div id="transforms_skewing" class="code_box">.skewing{
+    -webkit-transform: skew(20deg,10deg);
+    -moz-transform:    skew(20deg,10deg);
+    -ms-transform:     skew(20deg,10deg);
+    -o-transform:      skew(20deg,10deg);
+    transform:         skew(20deg,10deg);
+}</div>                                
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                        <div class="wrong">
+                            Trying the code and it does work?... Continue to next slide if something were wrong...
+                        </div>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="transitions" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+                <section>
+                    <header>
+                        Transitions
+                    </header>
+                    <article>
+                        <p>
+                            They allows transitions between two states of a specific element.
+                        </p>
+                        <p>
+                            Syntax:
+                        </p>
+                        <div id="transitions_syntax" class="code_box">    transition: [property] [duration] [timing-function] [delay]</div>
+                        
+                        <p>
+                            And that mean:
+                        </p>
+                        <div id="transitions_meaning" class="code_box">transition: [CSS property]
+            [seconds]
+            [linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n)]
+            [seconds]</div>
+                        
+                        <p>
+                            Example:
+                        </p>
+                        <div id="transitions_example" class="code_box">.box{
+    background-color: black;
+    transition: background-color 0.2s ease-in-out;
+}
+.element:hover{
+    background-color: blue;
+}</div>
+                        <br />
+                        <p>
+                            About <a target="_blank" href="http://cubic-bezier.com/#.17,.67,.83,.67">timing-function</a> (linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n))...
+                            what are all those things?
+                        </p>
+                    </article>
+                </section>                                
+            </div>            
+            
+            <div id="rgba_color" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+                <section>
+                    <header>
+                        RGBA Colors
+                    </header>
+                    <article>
+                        <p>
+                            Now we are free of javascripts to support transparencies. RGB supports them through RGBA.
+                        </p>
+                        <p>
+                            The "A" in this property name stands for alpha channel. In the same way that the opacity property works.
+                        </p>
+                        <p>
+                            Syntax:
+                        </p>
+                        <div id="rgba_color_syntax" class="code_box">    rgba(red,green,blue,alpha)</div>
+                        <p>
+                            Where:
+                        </p>
+                        <div id="rgba_color_where" class="code_box">    rgba([0-255],[0-255],[0-255],[0-1]);</div>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="rgba_example" class="step" data-x="8000" data-y="-1300" data-scale="6" >
+                <section>
+                    <header>
+                        Examples:
+                    </header>
+                    <article>
+                        <p>
+                            Red color with alpha channel equals to 30%
+                        </p>
+                        <div id="rgba_example_red" class="code_box">.red{
+    background-color: rgba(255,0,0,.3);
+}</div>
+                        <p>
+                            Green color with alpha channel equals to 30%
+                        </p>
+                        <div id="rgba_example_green" class="code_box">.green{    
+    background-color: rgba(0,255,0,.3);
+}</div>
+                        <p>
+                            Blue color with alpha channel equals to 30%
+                        </p>
+                        <div id="rgba_example_blue" class="code_box">.blue{
+    background-color: rgba(0,0,255,.3);
+}</div>
+                        <br />
+                        <p>
+                            In alpha channel:
+                        <p>
+                        <ul>
+                            <li>
+                                0 - It means 0% and represents transparency
+                            </li>
+                            <li>
+                                1 - It means 100% and represents opacity
+                            </li>
+                            <li>
+                                We can introduce decimal values: .3 = 30%
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="hsla_color" class="step" data-x="8800" data-y="2000" data-rotate="20" data-scale="4" >
+                <section>
+                    <header>
+                        Color HSLA
+                    </header>
+                    <article>
+                        <p>
+                            In the same way than RGBA, HLS has added the Alpha channel to their syntax. Then,
+                            HSLA stands for Hue, Saturation, Lightness and Alpha.
+                        </p>
+                        <p>
+                            Syntax:
+                        </p>
+                        <div id="hsla_color_syntax" class="code_box">  hsla(hue,saturation,lightness,alpha);</div>
+                        <p>
+                            Where:
+                        </p>
+                        <div id="hsla_color_where" class="code_box">   hsla([0-360],[0-100%],[0-100%],[0-1]);</div>
+                        <p>
+                            Example:
+                        </p>                        
+                        <div id="hsla_color_example" class="code_box">.box{
+    background-color:hsla(120,75%,75%,.5);
+}</div>
+                        <br />
+                        <p>
+                            In hue (color):
+                        <p>
+                        <ul>
+                            <li>
+                                0 or 360 is equal to red
+                            </li>
+                            <li>
+                                120 is equal to green
+                            </li>
+                            <li>
+                                240 is equal to blue
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+            
+            <div id="keyframes" class="step" data-x="7500" data-y="4500" data-scale="2">
+                <section>
+                    <header>
+                        @keyframes rules
+                    </header>
+                    <article>
+                        <p>
+                            Finally animations!... but even they follow rules
+                        </p>
+
+                        <p>
+                            Animations consist of two components:
+                        </p>
+                        <ul>
+                            <li>
+                                A style describing the CSS animation (transformations and transitions)
+                            </li>
+                            <li>
+                                A set of keyframes that indicates the start and end states of the animations.
+                            </li>
+                        </ul>
+                        <div id="keyframes_simple" class="code_box">@keyframes myfirst
+{
+    from {background: red;}
+    to {background: yellow;}
+}
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+    from {background: red;}
+    to {background: yellow;}
+}</div>                        
+                    </article>
+                </section>                                
+            </div>
+            <div id="animation_example" class="step" data-x="5000" data-y="5500" data-scale="2" >
+                <section>
+                    <header>
+                        Animation example:
+                    </header>
+                    <article>
+                        <div id="animation_example_code" class="code_box">@keyframes myfirst
+{
+    0%   {background: red;}
+    25%  {background: yellow;}
+    50%  {background: blue;}
+    100% {background: green;}
+}
+div
+{
+    width:100px;
+    height:100px;
+    background:red;
+    animation:myfirst 5s;
+    animation-iteration-count: infinite;    
+    -webkit-animation:myfirst 5s;/* Safari and Chrome */
+    -webkit-animation-iteration-count: infinite;
+}
+
+<div></div></div>
+                        <div id="animation_example_content"></div>
+                    </article>
+                </section>
+            </div>
+            <div id="animation" class="step" data-x="7200" data-y="5300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+                <section>
+                    <div id="div_accenture" class="accenture">
+                        <img src="images/accenture.png" />
+                    </div>
+                    <div id="div_be" class="be">
+                        <img src="images/be.png" />
+                    </div>
+                    <div id="div_greater" class="greater">
+                        <img src="images/greater_than.png" />
+                    </div>
+                    <div id="div_imagined" class="imagined">
+                        <img src="images/you_imagined.png" />
+                    </div>
+                    <div class="high_performance">
+                        <img src="images/high_performance.png" />
+                    </div>
+                </section>
+            </div>         
+        </div>
+        
+        <div class="hint" style="display: none;" >
+            <br />
+            <div style="background-color: #0091be; float: left; width:50%">
+                <img src="images/html5.png" width="200" />
+            </div>
+            <div style="background-color: #ee652a; float: left; width:50%">
+                <img src="images/css3.png" width="200" />
+            </div>
+            <div style="float:left; width: 100%; color:#000;">
+                <br />
+                <div style="font-size: larger;" >CSS3</div>
+                <br />
+                <div style="font-size: large;" >Cascade Style Sheet 3</div>
+            </div>
+            <div style="float:right; height: 200px; ">
+                <br />
+                <img src="images/accenture_logo.png" width="200" />
+            </div>            
+        </div>
+        
+    </body>
+</html>

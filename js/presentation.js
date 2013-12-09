@@ -1,0 +1,27 @@
+$(document).ready(function(){
+    $.getScript("js/impress.min.js",function(){
+        impress().init();
+    });
+
+    slide_selectors();
+    slide_ways_to_use();
+    slide_cascading_order();
+    slide_non_conflicted();    
+    slide_border_radius_example();
+    slide_short_hands();
+    slide_calculating_box();
+    slide_last_example();
+    slide_border_example();
+    slide_border_radius();
+    slide_box_shadow();
+    slide_text_shadow();
+    slide_background_property();
+    slide_font_face();
+    slide_hsla_color();
+    slide_transforms();
+    slide_transitions();
+    slide_rgba_color();
+    slide_rgba_example();
+    slide_keyframes();
+    slide_animation_example();
+});
