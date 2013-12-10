@@ -11,6 +11,19 @@
     clear: both;
 }
 
+.win_mac .header{
+    height: 23px;
+    background-image:url("../images/backgrounds/left.png"),url("../images/backgrounds/background.png");
+    background-position: top left, center;
+    background-repeat: no-repeat, repeat;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #333333;
+}
+
 #overview {
     display: none;
 }
@@ -71,14 +84,13 @@
 }
 
 #ways_to_use p{
-    padding: 25px;
+    padding: 20px;
 }
 #ways_to_use li{
     list-style-type: decimal;
     padding: 10px;
 }
 #ways_to_use .code_box{
-    width: 80%;
     height: 80px;
 }
 #ways_to_use #ways_external{
@@ -103,30 +115,33 @@
     right: 0;
     bottom: 0;
     left: 0;
-    width: 80%;
     height: 80px;
-    margin: 30px;
 }
 #cascading_order .keyword{
     color: #ff9900;
     font-size: 30px;
 }
+#cascading_order .win_mac{
+    top: 30px;
+    position: relative;
+}
 
 #non_conflicted p{
     padding: 50px;
-}
-#non_conflicted .code_box{   
-    width: 40%;
-    height: 200px;
-    float: left;
-    margin: 30px;
-}
-#non_conflicted p{
     text-align: center;
+}
+#non_conflicted .code_box{
+    height: 200px;
+}
+#non_conflicted li{
+    width: 40%;
+    float: left;
+    left: 50px;
+    margin-left: 50px;
 }
 #non_conflicted img{
     position: relative;
-    top: -100px;
+    top: -60px;
     z-index: 50;
 }
 
@@ -193,20 +208,26 @@
 }
 
 #border_example{
-    font-size: 25px;
+    font-size: 22px;
 }
 #border_example .code_box{
     height: 70px;
-    margin-left: 10px;
 }
 #border_example table{
-    margin-top: 40px;
+    margin-top: 50px;
+    width: 100%;
 }
 #border_example td{
     vertical-align: top;
 }
 #border_example .image{
     width: 70px;
+}
+#border_example .code{
+    padding-left: 15px;
+}
+#border_example .win_mac{
+    margin-bottom: 30px;
 }
 
 #short_hands{
@@ -221,7 +242,7 @@
 }
 #short_hands .code_box{
     height: 50px;
-    margin: 10px;
+    margin-bottom: 30px;
 }
 #short_hands #short_hands_3{
     height: 150px;
@@ -238,24 +259,26 @@
 }
 #last_example .code_box{
     height: 70px;
-    margin-left: 10px;
 }
 #last_example #last_example_1{
     height: 160px;
 }
 
-#border-radius_example{
-    font-size: 20px;
-}
 #border-radius_example .code_box{
     height: 70px;
-    margin-left: 10px;
-}
-#border-radius_example table{
-    margin-top: 40px;
 }
 #border-radius_example td{
     vertical-align: top;
+}
+#border-radius_example{
+    font-size: 20px;
+}
+#border-radius_example table{
+    margin-top: 50px;
+    width: 100%;
+}
+#border-radius_example .win_mac{
+    margin-left: 10px;
 }
 #border-radius_example .image{
     width: 70px;
@@ -269,7 +292,6 @@
 }
 #calculating_box #box_calculated{
     height: 50px;
-    top: -30px;
 }
 #calculating_box img{
     margin-top: 50px;
@@ -302,6 +324,10 @@
     position: relative;
     float: right;
     width: 50%;
+}
+#calculating_box .move_up{
+    top: -30px;
+    position: relative;
 }
 
 #box_shadow #box_shadow_syntax{
@@ -467,16 +493,8 @@
 }
 #transforms li{
     float: left;
-    width: 50%;
-/*
-    display: none;
-    opacity: 0;    
-    -webkit-transition: 0.5s;
-    -moz-transition:    0.5s;
-    -ms-transition:     0.5s;
-    -o-transition:      0.5s;
-    transition:         0.5s;
-*/
+    width: 45%;
+    margin-left: 5px;
 }
 #transforms.active li{
 /*
@@ -576,7 +594,7 @@
     -webkit-animation-iteration-count: infinite; /* Safari and Chrome */
 }
 #animation_example .code_box{
-    height: 420px;
+    height: 450px;
 }
 
 #animation div {
@@ -643,11 +661,11 @@
     * Safari and Chrome
     * forwards was used to preserv the last state of the animation
     */
-    -webkit-animation: accenture_animation 5s forwards 3s;
-    -moz-animation: accenture_animation 5s 3s;
-    -ms-animation: accenture_animation 5s forwards 3s; 
-    -o-animation: accenture_animation 5s forwards 3s; 
-    animation: accenture_animation 5s 3s; 
+    -webkit-animation: accenture_animation 5s forwards 1s;
+    -moz-animation: accenture_animation 5s 1s;
+    -ms-animation: accenture_animation 5s forwards 1s; 
+    -o-animation: accenture_animation 5s forwards 1s; 
+    animation: accenture_animation 5s 1s; 
 }
 @-webkit-keyframes greater_than_animation
 {
@@ -657,7 +675,7 @@
     }
 }
 #animation.present .greater{
-    -webkit-animation: greater_than_animation 4s forwards 5s;
+    -webkit-animation: greater_than_animation 5.5s forwards 2s;
 }
 @-webkit-keyframes be_animation
 {
@@ -667,7 +685,7 @@
     }
 }
 #animation.present .be{
-    -webkit-animation: be_animation 4s forwards 4s;
+    -webkit-animation: be_animation 4s forwards 1s;
 }
 @-webkit-keyframes imagined_animation
 {
@@ -677,7 +695,7 @@
     }
 }
 #animation.present .imagined{
-    -webkit-animation: imagined_animation 4s forwards 4s;
+    -webkit-animation: imagined_animation 4s forwards 1s;
 }
 @-webkit-keyframes high_performance_animation
 {
@@ -687,9 +705,9 @@
     }
 }
 #animation.present .high_performance{
-    -webkit-animation: high_performance_animation 4s forwards 7s;
-    -moz-animation: high_performance_animation 4s 7s;
-    -ms-animation: high_performance_animation 4s forwards 7s;
-    -o-animation: high_performance_animation 4s forwards 7s;
-    animation: high_performance_animation 4s 7s;
+    -webkit-animation: high_performance_animation 4s forwards 5.5s;
+    -moz-animation: high_performance_animation 4s 5.5s;
+    -ms-animation: high_performance_animation 4s forwards 5.5s;
+    -o-animation: high_performance_animation 4s forwards 5.5s;
+    animation: high_performance_animation 4s 5.5s;
 }

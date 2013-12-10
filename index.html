@@ -88,6 +88,8 @@
                         </ul>
                     </div>
                     <div class="right">
+                        <div class="win_mac">
+                            <div class="header">Selectors</div>
                         <div id="selectors_example"><div id="main">
     <div id="toolbar">
         <button class="toolbarButton">
@@ -98,7 +100,7 @@
     </div>
     <span>First child</span>
     <span>Second child</span>
-</div>
+</div></div>                            
                         </div>
                     </div>
                     
@@ -291,20 +293,32 @@
                     <ul>
                         <li>
                             External style sheet
-                            <div id="ways_external" class="code_box"><link href="css/presentation.css" rel="stylesheet" ></div>
+                            <div class="win_mac">
+                                <div class="header">External style sheet</div><div id="ways_external" class="code_box"><link href="css/presentation.css" rel="stylesheet" ></div>
+                                <div id="ways_external" class="code_box"><link href="css/presentation.css" rel="stylesheet" ></div>
+                            </div>
+                            
                         </li>
                         <li>
                             Internal style sheet
-                            <div id="ways_internal" class="code_box"><style>
+                            <div class="win_mac">
+                            <div class="header">Internal style sheet</div>
+                                <div id="ways_internal" class="code_box"><style>
     hr {color:sienna;}
     p {margin-left:20px;}
 </style></div>
+                            </div>
+                            
                         </li>
                         <li>
                             Inline style
-                            <div id="ways_inline" class="code_box"><p style="color:sienna;margin-left:20px;">
+                            <div class="win_mac">
+                            <div class="header">Inline style</div>
+                                <div id="ways_inline" class="code_box"><p style="color:sienna;margin-left:20px;">
     This is a paragraph.
 </p></div>
+                            </div>
+                            
                         </li>
                     </ul>
                 </section>               
@@ -336,9 +350,14 @@
                         </li>
                         <li>
                             <span class="keyword">!important</span> rule (I don't care about anything)
-                            <div id="cascading_order_important">hr {
+
+                            <div class="win_mac">
+                                <div class="header">!important rule</div>
+                                <div id="cascading_order_important">hr {
     color: black !important;
 }</div>
+                            </div>
+                            
                         </li>
                     </ul>
                 </section>
@@ -352,19 +371,33 @@
                 </section>
                 <p>
                     Non-conflicted properties will be combined:
-                </p>                
-                <div id="seventh_css" class="code_box">.intro{
+                </p>
+                
+                <ul>
+                    <li>
+                        <div class="win_mac">
+                        <div class="header">Non-conflicted properties</div>
+                        <div id="non_conflicted_left" class="code_box">.intro{
     color: #ddddadd;
 }
 .intro{
     margin-bottom: 5px;
     width: 900px;
 }</div>
-                <div id="seventh_combined" class="code_box">.intro{
+                        </div>
+                    </li>
+                    <li>
+                        <div class="win_mac">
+                        <div class="header">It's the same than</div>
+                        <div id="non_conflicted_right" class="code_box">.intro{
     color: #ddddadd;
     margin-bottom: 5px;
     width: 900px;
 }</div>
+                    </div>
+                    </li>
+                </ul>
+                               
                 <p><img src="images/arrow_right.png" /></p>
             </div>
             
@@ -401,12 +434,16 @@
                         Calculating  the width of the .box:
                     </header>
                     <article>
-                        <div id="calculating_box_style" class="code_box">.box{
+                        <div class="win_mac">
+                            <div class="header">Applied style</div>
+                            <div id="calculating_box_style" class="code_box">.box{
     width: 300px;
     padding: 10px;
     border: 2px solid black;
     margin: 20px;    
 }</div>
+                        </div>
+                        
                         
                         <div class="left">
                             <img src="images/arrow_right_up.png" />
@@ -420,9 +457,14 @@
                         </div>
                         
                         <div class="clear"></div>
-                
-                        <div id="box_calculated" class="code_box">width: 
+                        
+                        <div class="win_mac move_up">
+                            <div class="header">Width calculated</div>
+                            <div id="box_calculated" class="code_box">width: 
         300 + (10*2) + (2*2) = 324px</div>
+                        </div>
+                        
+                        
                         
                     </article>
                 </section>
@@ -441,18 +483,26 @@
                         <ul>
                             <li>
                                 Applying to all corners:
-                                <div id="border_radius_simple" class="code_box">.box{
+                                <div class="win_mac">
+                                        <div class="header">Applying to all corners</div>
+                                        <div id="border_radius_simple" class="code_box">.box{
     border-radius: 15px;
-}</div>                                
+}</div>
+                                </div>                                
+                                
                             </li>
                             <li>
                                 Applying by indivial corner
-                                <div id="border_radius_individual" class="code_box">.box{
+                                <div class="win_mac">
+                                        <div class="header">Applying by indivial corner</div>
+<div id="border_radius_individual" class="code_box">.box{
     border-top-left-radius: 15px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 15px;
-}</div>                                                        
+}</div>
+                                </div>
+                                
                             </li>
                         </ul>
                     </article>
@@ -474,23 +524,36 @@
                         <p>For instance:</p>
                         <ul>
                             <li>
-                                <div id="short_hands_1" class="code_box">.box{ border-width: 1em 2em 3em 4em; }</div>
+                                <div class="win_mac">
+                                    <div class="header">Each corner width</div>
+                                    <div id="short_hands_1" class="code_box">.box{ border-width: 1em 2em 3em 4em; }</div>
+                                </div>
                             </li>
                             <li>
-                                <div id="short_hands_2" class="code_box">.box{ border-width: 1em; }</div>
+                                <div class="win_mac">
+                                    <div class="header">All in-one</div>
+                                    <div id="short_hands_2" class="code_box">.box{ border-width: 1em; }</div>
+                                </div>
                             </li>
                             <li>
-                                <div id="short_hands_3" class="code_box">.box{
+                                <div class="win_mac">
+                                    <div class="header">background properties</div>
+                                    <div id="short_hands_3" class="code_box">.box{
     background-color: #000;
     background-image: url(images/bg.gif);
     background-repeat: no-repeat;
     background-position: top right;
 }</div>
+                                </div>                                
                             </li>
                             <li>
-                                <div id="short_hands_4" class="code_box">.box{
+                                <div class="win_mac">
+                                    <div class="header">background shorthand</div>
+                                    <div id="short_hands_4" class="code_box">.box{
     background: #000 url(images/bg.gif) no-repeat top right;
 }</div>
+                                </div>
+                                
                             </li>
                         </ul>
                     </article>
@@ -508,68 +571,64 @@
                         <p>
                             border-width syntax:
                         </p>
-                        <div class="code_box" id="border_example_syntax">
+                        <div class="win_mac">
+                                <div class="header">border-with syntax</div>
+<div class="code_box" id="border_example_syntax">
     border-width: [top] [right] [bottom] [left];</div>
+                        </div>
+                        
                         
                         <table>
-                            <tr>
-                                <td colspan="2">
-                                    The four values represent the top, right, bottom and left edges respectively
-                                </td>
-                            </tr>
                             <tr>
                                 <td class="image">
                                     <img src="images/border4.png" />
                                 </td>
                                 <td class="code">
-                                    <div id="border_example_4" class="code_box">.box{
+                                    <div class="win_mac">
+                                        <div class="header">top, right, bottom and left values</div>
+                                        <div id="border_example_4" class="code_box">.box{
     border-width: 1em 2em 3em 4em;
 }</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    The first value represents the top edge, the second, the horizontal
+                                    </div>                                    
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/border3.png" />
                                 </td>
-                                <td>
-                                    <div id="border_example_3" class="code_box">.box{
+                                <td class="code">
+                                    <div class="win_mac">
+                                        <div class="header">top, horizontal and bottom</div>
+                                        <div id="border_example_3" class="code_box">.box{
     border-width: 1em 2em 3em;
-}</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    The first value represents the vertical edges, the second the horizontal ones.
+}</div>	
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/border2.png" />
                                 </td>
-                                <td>
-                                    <div id="border_example_2" class="code_box">.box{
-    border-width: 1em 2em;
-}</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    The unique value represents all edges.
+                                <td class="code">
+                                    <div class="win_mac">
+                                        <div class="header">vertical and the horizontal edges</div>
+                                        <div id="border_example_2" class="code_box">.box{
+        border-width: 1em 2em;
+    }</div>	
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/border1.png" />
                                 </td>
-                                <td>
-                                    <div id="border_example_1" class="code_box">.box{
+                                <td class="code">
+                                    <div class="win_mac">
+                                        <div class="header">all edges</div>
+                                        <div id="border_example_1" class="code_box">.box{
     border-width: 1em;
 }</div>
+                                    </div>                                    
                                 </td>
                             </tr>
                         </table>                        
@@ -586,71 +645,66 @@
                         <p>
                             border-radius syntax:
                         </p>
-                        <div class="code_box" id="bre_syntax">
-    border-radius: [top left] [top right] [bottom right] [bottom left];</div>
+                            <div class="win_mac">
+                                <div class="header">border-radius syntax</div>
+                                <div class="code_box" id="bre_syntax">
+    border-radius: [top left] [top right] [bottom right] [bottom left];</div>	
+                            </div>
                         
                         <table>
-                            <tr>
-                                <td colspan="2">
-                                    The four values represent the top left, top right, bottom right and bottom left corners respectively, always in that order, that is clock-wise starting at the top left.
-                                </td>
-                            </tr>
                             <tr>
                                 <td class="image">
                                     <img src="images/corner4.png" />
                                 </td>
                                 <td class="code">
-                                    <div id="bre_4" class="code_box">.box{
-    border-radius: 1em 2em 3em 4em;
-}</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    The first value represents the top left corner, the second the top right and bottom left ones, and the third value the bottom right corner.
+                                    <div class="win_mac">
+                                        <div class="header">top left, top right, bottom right and bottom left corners</div>
+                                        <div id="bre_4" class="code_box">.box{
+        border-radius: 1em 2em 3em 4em;
+    }</div>	
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/corner3.png" />
                                 </td>
-                                <td>
-                                    <div id="bre_3" class="code_box">.box{
-    border-radius: 1em 2em 3em;
-}</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    The first value represents the top left and bottom right corner, the second the top right and bottom left ones.
+                                <td class="code">
+                                    <div class="win_mac">
+                                        <div class="header">top left, top right and bottom left and finally the bottom right corner</div>
+                                        <div id="bre_3" class="code_box">.box{
+        border-radius: 1em 2em 3em;
+    }</div>	
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/corner2.png" />
                                 </td>
-                                <td>
-                                    <div id="bre_2" class="code_box">.box{
+                                <td class="code">
+                                    <div class="win_mac">
+                                        <div class="header">top left and bottom right & top right and bottom left corners</div>
+                                        <div id="bre_2" class="code_box">.box{
     border-radius: 1em 2em;
 }</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="2">
-                                    The unique value represents all corners.
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/corner1.png" />
                                 </td>
-                                <td>
-                                    <div id="bre_1" class="code_box">.box{
-    border-radius: 1em;
-}</div>
+                                <td class="code">
+                                    <div class="win_mac">
+                                        <div class="header">all corners</div>
+                                        <div id="bre_1" class="code_box">.box{
+        border-radius: 1em;
+    }</div>	
+                                    </div>
                                 </td>
                             </tr>
-                        </table>                        
+                        </table>
                     </article>
                 </section>
             </div>
@@ -664,19 +718,24 @@
                         <ul>
                             <li>
                                 The following declarations:
-                                <div id="last_example_1" class="code_box">.box{
+                                <div class="win_mac">
+                                <div class="header"></div>
+    <div id="last_example_1" class="code_box">.box{
     font-style: italic;
     font-weight: bold;
     font-size: .8em;
     line-height: 1.2;
     font-family: Arial, sans-serif;
-}</div>
+}</div></div>
                             </li>
                             <li>
                                 can be shortened to the following:
-                                <div id="last_example_2" class="code_box">.box{
+                                <div class="win_mac">
+                                    <div class="header"></div>
+                                    <div id="last_example_2" class="code_box">.box{
     font: italic bold .8em/1.2 Arial, sans-serif;
 }</div>
+                                </div>                                
                             </li>
                         </ul>
 
@@ -722,14 +781,20 @@
                         <p>
                             Syntax:
                         </p>
-                        <div id="box_shadow_syntax" class="code_box">    box-shadow: [h-shadow] [v-shadow] [blur] [spread] [color] [inset]</div>
+<div class="win_mac">
+    <div class="header"></div>
+    <div id="box_shadow_syntax" class="code_box">    box-shadow: [h-shadow] [v-shadow] [blur] [spread] [color] [inset]</div>	
+</div>                        
                         <br />
                         <p>
                             Example:
                         </p>
-                        <div id="box_shadow_sample" class="code_box">.box{
+                        <div class="win_mac">
+                            <div class="header"></div>
+                            <div id="box_shadow_sample" class="code_box">.box{
     box-shadow: 1px 2px 2px #000;
-}</div>
+}</div>	
+</div>                                               
                         <p>Output:</p>
                         <div class="container_box"><div class="box"><span>I am inside a box with shadow...</span></div></div>
                         <a href="http://jsfiddle.net/etlapa/yenT7/" target="_blank">Try me</a>
@@ -749,14 +814,20 @@
                         <p>
                             Syntax:
                         </p>
-                        <div id="text_shadow_syntax">    text-shadow: [h-shadow] [v-shadow] [blur] [color]</div>
+<div class="win_mac">
+    <div class="header"></div>
+    <div id="text_shadow_syntax">    text-shadow: [h-shadow] [v-shadow] [blur] [color]</div>
+</div>                                                
                         <br />
                         <p>
                             Example:
                         </p>
-                        <div id="text_shadow_sample" class="code_box">.box{
+<div class="win_mac">
+	<div class="header"></div>
+<div id="text_shadow_sample" class="code_box">.box{
     text-shadow: 1px 2px 2px #000;
-}</div>
+}</div>	
+</div>                                                
                         <p>Output:</p>
                         <div class="container_box">
                             <span>I have a shadow!</span>
@@ -782,6 +853,8 @@
                         <p>
                             Example:
                         </p>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="background_property_sample" class="code_box">body{
     background-image:   url(../images/html5.png),
                         url(../images/css3.png),
@@ -790,6 +863,7 @@
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 100px, 100px, 100%;
 }</div>                        
+</div>
                         <p>Output:</p>
                         <p class="pst_pst">(pst, pst)</p>
                         <p>(Have you noticed the HTML5, CSS3 logos and the blue background in this presentation?)</p>
@@ -822,6 +896,9 @@
                             Web Designers in HTML 4
                         </div>
                         <div class="below">(and below)</div>
+                        <div class="clear"></div>
+<div class="win_mac">
+    <div class="header"></div>
                         <div id="font_face_code" class="code_box">@font-face{
     font-family: vladimir;
     src: url("../fonts/vladimir.eot"),
@@ -830,7 +907,8 @@
 }
 body{
     font-family: vladimir, cursive;
-}</div>
+}</div>	
+</div>
                     </article>
                 </section>
             </div>
@@ -858,43 +936,55 @@ body{
                         <ul>
                             <li>
                                 Translate:
+<div class="win_mac">
+	<div class="header"></div>
                                 <div id="transforms_positioning" class="code_box">.positioning {
     -webkit-transform: translate(0px,-10px);
     -moz-transform:    translate(0px,-10px);
     -ms-transform:     translate(0px,-10px);
     -o-transform:      translate(0px,-10px);
     transform:         translate(0px,-10px);
-}</div>                                
+}</div>                                	
+</div>                                
                             </li>
                             <li>
                                 Rotate:
+<div class="win_mac">
+	<div class="header"></div>
                                 <div id="transforms_rotating" class="code_box">.rotating {
     -webkit-transform: rotate(-10deg);
     -moz-transform:    rotate(-10deg);
     -ms-transform:     rotate(-10deg);
     -o-transform:      rotate(-10deg);
     transform:         rotate(-10deg);
-}</div>                                
+}</div>                                	
+</div>
                             </li>
                             <li>
                                 Scale:
+<div class="win_mac">
+	<div class="header"></div>
                                 <div id="transforms_scaling" class="code_box">.scaling {
     -webkit-transform: scale(0.7);
     -moz-transform:    scale(0.7);
     -ms-transform:     scale(0.7);
     -o-transform:      scale(0.7);
     transform:         scale(0.7);
-}</div>                                
+}</div>                                	
+</div>
                             </li>
                             <li>
                                 Skew:
+<div class="win_mac">
+	<div class="header"></div>
                                 <div id="transforms_skewing" class="code_box">.skewing{
     -webkit-transform: skew(20deg,10deg);
     -moz-transform:    skew(20deg,10deg);
     -ms-transform:     skew(20deg,10deg);
     -o-transform:      skew(20deg,10deg);
     transform:         skew(20deg,10deg);
-}</div>                                
+}</div>                                	
+</div>
                             </li>
                         </ul>
                         <div class="clear"></div>
@@ -917,27 +1007,34 @@ body{
                         <p>
                             Syntax:
                         </p>
-                        <div id="transitions_syntax" class="code_box">    transition: [property] [duration] [timing-function] [delay]</div>
-                        
+<div class="win_mac">
+	<div class="header"></div>
+<div id="transitions_syntax" class="code_box">    transition: [property] [duration] [timing-function] [delay]</div>	
+</div>                                                
                         <p>
                             And that mean:
                         </p>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="transitions_meaning" class="code_box">transition: [CSS property]
             [seconds]
             [linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n)]
             [seconds]</div>
+</div>
                         
                         <p>
                             Example:
                         </p>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="transitions_example" class="code_box">.box{
     background-color: black;
     transition: background-color 0.2s ease-in-out;
 }
 .element:hover{
     background-color: blue;
-}</div>
-                        <br />
+}</div>	
+</div>                        
                         <p>
                             About <a target="_blank" href="http://cubic-bezier.com/#.17,.67,.83,.67">timing-function</a> (linear|ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n))...
                             what are all those things?
@@ -961,11 +1058,18 @@ body{
                         <p>
                             Syntax:
                         </p>
-                        <div id="rgba_color_syntax" class="code_box">    rgba(red,green,blue,alpha)</div>
+<div class="win_mac">
+	<div class="header"></div>
+<div id="rgba_color_syntax" class="code_box">    rgba(red,green,blue,alpha)</div>	
+</div>
+                        
                         <p>
                             Where:
                         </p>
-                        <div id="rgba_color_where" class="code_box">    rgba([0-255],[0-255],[0-255],[0-1]);</div>
+<div class="win_mac">
+	<div class="header"></div>
+	<div id="rgba_color_where" class="code_box">    rgba([0-255],[0-255],[0-255],[0-1]);</div>
+</div>                        
                     </article>
                 </section>
             </div>
@@ -979,21 +1083,33 @@ body{
                         <p>
                             Red color with alpha channel equals to 30%
                         </p>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="rgba_example_red" class="code_box">.red{
     background-color: rgba(255,0,0,.3);
-}</div>
+}</div>	
+</div>
+
                         <p>
                             Green color with alpha channel equals to 30%
                         </p>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="rgba_example_green" class="code_box">.green{    
     background-color: rgba(0,255,0,.3);
-}</div>
+}</div>	
+</div>
+
                         <p>
                             Blue color with alpha channel equals to 30%
                         </p>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="rgba_example_blue" class="code_box">.blue{
     background-color: rgba(0,0,255,.3);
-}</div>
+}</div>	
+</div>                        
+
                         <br />
                         <p>
                             In alpha channel:
@@ -1026,17 +1142,28 @@ body{
                         <p>
                             Syntax:
                         </p>
-                        <div id="hsla_color_syntax" class="code_box">  hsla(hue,saturation,lightness,alpha);</div>
+<div class="win_mac">
+	<div class="header"></div>
+	<div id="hsla_color_syntax" class="code_box">  hsla(hue,saturation,lightness,alpha);</div>
+</div>                        
+                        
                         <p>
                             Where:
                         </p>
-                        <div id="hsla_color_where" class="code_box">   hsla([0-360],[0-100%],[0-100%],[0-1]);</div>
+<div class="win_mac">
+	<div class="header"></div>
+    <div id="hsla_color_where" class="code_box">   hsla([0-360],[0-100%],[0-100%],[0-1]);</div>	
+</div>                        
+                        
                         <p>
                             Example:
                         </p>                        
-                        <div id="hsla_color_example" class="code_box">.box{
+<div class="win_mac">
+	<div class="header"></div>
+	                        <div id="hsla_color_example" class="code_box">.box{
     background-color:hsla(120,75%,75%,.5);
 }</div>
+</div>                        
                         <br />
                         <p>
                             In hue (color):
@@ -1077,6 +1204,8 @@ body{
                                 A set of keyframes that indicates the start and end states of the animations.
                             </li>
                         </ul>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="keyframes_simple" class="code_box">@keyframes myfirst
 {
     from {background: red;}
@@ -1086,7 +1215,8 @@ body{
 {
     from {background: red;}
     to {background: yellow;}
-}</div>                        
+}</div>                        	
+</div>                        
                     </article>
                 </section>                                
             </div>
@@ -1096,6 +1226,8 @@ body{
                         Animation example:
                     </header>
                     <article>
+<div class="win_mac">
+	<div class="header"></div>
                         <div id="animation_example_code" class="code_box">@keyframes myfirst
 {
     0%   {background: red;}
@@ -1114,7 +1246,9 @@ div
     -webkit-animation-iteration-count: infinite;
 }
 
-<div></div></div>
+<div></div></div>	
+</div>
+
                         <div id="animation_example_content"></div>
                     </article>
                 </section>

@@ -28,11 +28,11 @@ function slide_cascading_order(){
 }
 function slide_non_conflicted(){
     boxCodeFactory({
-        id:"seventh_css",
+        id:"non_conflicted_left",
         fontSize:24
     });
     boxCodeFactory({
-        id:"seventh_combined",
+        id:"non_conflicted_right",
         fontSize:24
     });
 }
